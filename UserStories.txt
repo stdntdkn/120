@@ -1,0 +1,11 @@
+I as an author want to write blog posts
+
+I as an author want to edit my blog posts
+
+I as an author want to be able to delete my blog posts
+
+I as a reader want to add comments to blog posts
+
+I as a reader want to edit my comments 
+
+I as a reader want to be able to choose a name
