@@ -1,0 +1,84 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <script src = https://cdn.jsdelivr.net/npm/vue/dist/vue.js></script>
+    <style type = text/css>
+     body {background-color: white;}
+    </style>
+    <link rel = "stylesheet" type = "text/css" href = "styles.css" href="styles.css">
+    </head>
+    <body>
+<h1> Random Blog</h1>
+<h3> Welcome to Random's blog </h3> 
+<p style="color:olive;font-size: 17px">  This is text </p>
+<p> <i> text   </i> </p>
+
+<button type="button"
+onclick="document.getElementById('demo').innerHTML = Date()">
+Click me to display Date and Time.</button>
+<p id="demo"></p>
+
+<p id="scores"></p>
+<script>
+var x = 100;
+ var y = 75;
+ var z = 50;
+ var sum = x + y + z;
+ var avg = (x + y + z)/3;
+ document.getElementById("scores").innerHTML = "avg " + avg + " sum is " + sum + " y is " + y + " z is " + z 
+ </script>
+
+<div id = "app" style = column-count:1>
+<h2>Did you like this blog post?  </h2>
+<ol>
+  <li v-for="todo in todos">
+    <input type="checkbox"
+    v-on:change="toggle(todo)"
+    v-bind:checked="todo.done">
+    
+    <del v-if="todo.done">
+    {{ todo.text }}
+    </del>
+    <span v-else>
+      {{ todo.text }}
+    </span>
+  </li>
+  
+  
+  
+</ol>
+<input placeholder="Add routine items"
+v-model="newItem"
+@keyup.enter="addItem">
+</div>
+<script>
+new Vue({
+  el:"#app",
+  
+data: {
+   todos: [
+   {text: "Good", done:false},
+   {text: "Ok", done:false},
+   {text: "Didnt read, lol", done:true}
+   ]
+   },
+   
+   methods: {
+     toggle: function(todo){
+       todo.done =!todo.done
+     },
+     addItem: function (newItem){
+       var value =this.newItem && this.newItem.trim()
+       this.todos.push({
+         text:value,
+         done:false})
+         this.newItem="";
+     }
+   }
+      
+       })
+   </script>
+ 
+<input type = "button" onclick = "student()" value = "Student">
+</body>
+</html>
