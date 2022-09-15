@@ -14,9 +14,9 @@
 <p> <i> text   </i> </p>
 
 <button type="button"
-onclick="document.getElementById('demo').innerHTML = Date()">
-Click me to display Date and Time.</button>
-<p id="demo"></p>
+onclick="document.getElementById('tim').innerHTML = Date()">
+Click to display Date and Time.</button>
+<p id="tim"></p>
 
 <p id="scores"></p>
 <script>
@@ -25,7 +25,7 @@ var x = 100;
  var z = 50;
  var sum = x + y + z;
  var avg = (x + y + z)/3;
- document.getElementById("scores").innerHTML = "avg " + avg + " sum is " + sum + " y is " + y + " z is " + z 
+ document.getElementById("scores").innerHTML = "avg " + avg + " sum is " + sum + " y is " + y + " z is " + z + "x is " + x 
  </script>
 
 <div id = "app" style = column-count:1>
@@ -79,6 +79,5 @@ data: {
        })
    </script>
  
-<input type = "button" onclick = "student()" value = "Student">
 </body>
 </html>
