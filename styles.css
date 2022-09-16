@@ -6,3 +6,85 @@ h1 {
 h3 {
   text-align: center;
 }
+
+body {     background-color: yellow;     margin: 2px; 
+} p, div, button, h1, h2, h3 {     color: white;     text-align: center;     border-radius: 5px;     border-color: #651717; 
+} p {     margin: 3%; 
+} footer {     margin: 3%; 
+} 
+/* Styles navigation bar */ 
+.nav {     background-color: #651717;     border-style: solid;     border-radius: 5px;     overflow: hidden; 
+
+.nav a {     float: left;     background-color: #651717;     display: block;     color: #f2f2f2;     text-align: center;     text-decoration: none;     font-size: 17px;     min-width: 11%; 
+
+} 
+
+/* Change the color of links on hover */ 
+.nav a:hover {     background-color: white;     color: #651717; 
+} 
+/*sticks divs in this class to top of the page irrespective of scrolling point
+ */ .sticky {     position: fixed;     top: 0;     width: 100%; 
+} 
+/*Starts menu icon hidden by default*/ 
+.nav a.icon {     display: none; 
+} 
+/*changes background of menu icon when hovering */ 
+.nav a.icon:hover { 
+    background-color: black; 
+} 
+/*ensures all images in general are auto-scaled responsively */ img {     max-width: 100%;     height: auto;     max-height: 15%; 
+} 
+/*limits height of menu icon image and scales width accordingly */ img.icon {     max-height: 20px;     width: auto; 
+} 
+/* Styling for the Picture of the Week image - provides rounded border and pad ding, ensures responsive resizing based on screen size */ 
+img.POTW { 
+
+    max-width: 90%;     height: auto;     padding: 3%; 
+
+    border-style: solid;     border-color: #651717;     border-radius: 5px; 
+} .left {     width: 55%;     overflow: auto; 
+} .right {     width: 30%;     padding-left: 5%;     padding-right: 5%;     overflow: auto;  
+} 
+.column {     float: left; 
+  } 
+ 
+/*Styles the main content in the LHS column and  includes a dividing line between it and the RHS secondary content */ 
+.content {     border-right-style: solid;     border-right-color: #651717;     border-right-width: 4px;     border-radius: 0px;     overflow: auto;     background-image: url("gym.jpg");     background-size: 95%, auto;     background-position-x: 0;     background-attachment: fixed; 
+} 
+/* Ensures all heading divs are a uniform height */ 
+.heading {     height: 5%; 
+} .quiz {     padding: 3%; 
+    border-style: solid; 
+} 
+ 
+   
+ 
+/* When screen less than 600 pixels width, hide nav links, except for the firs t one. Show hamburger menu */ 
+@media screen and (max-width: 600px) {     .nav a:not(:first-child) {         display: none; 
+    } 
+    .nav a.icon {       float: right;       display: block; 
+    } 
+    /* Reduces the content down to one longer scrolling column, with no dividi ng border */     .column {         float: none;         width: 90%; 
+      }     .content {         border-style: none; 
+    } 
+ 
+  /* The "responsive" class is added to the nav bar with JS when user clicks i con.  
+  Displays links vertically instead of horizontally */ 
+    .nav.responsive {position: relative;} 
+    .nav.responsive a.icon {         position: absolute;         right: 0;         top: 0; 
+    } 
+ 
+    /* Adjusts the style of the links for the "responsive" class */     .nav.responsive a {         float: none;         display: block;         text-align: left;         background-color: #651717;         color: #f2f2f2;         text-decoration: none;         min-width: 11%;         max-width: 11%; 
+    } 
+ 
+    /* Specialised transition CSS */     .slide-fade-enter-active {         transition: all .3s ease; 
+      } 
+ 
+      .slide-fade-leave-active {         transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);       } 
+@media screen and (max-width: 500px) { 
+
+.style1 .style2 .style3 { 
+
+new styling 
+}
+style=”max-width:100%;height:auto;”
