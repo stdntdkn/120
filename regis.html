@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <script src = https://cdn.jsdelivr.net/npm/vue/dist/vue.js></script>
+
+<header>
+      
+      <center><a href="index.html"><picture src="img.png"></picture></a></center> 
+      <iframe 	width="560" 	height="315" 	src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
+      
+      
+
+
+ <link rel = "stylesheet" type = "text/css" href = "styles.css" href="styles.css">
+    </header> 
+ 
+    <body> 
+
+      <div id="nav" class="nav"> 
+          <a id="nav" href="index.html">Home</a> 
+          <a id="nav" href="about.html">About </a> 
+          <a id="nav" href="conta.html">Contact </a> 
+          <a id="nav" href="sear.html">Search </a> 
+          
+          <a id="nav" href="javascript:void(0);" onclick="loginWindow()">Login
+/Register</a> 
+    
+      </div> 
+
+ <link rel = "stylesheet" type = "text/css" href = "styles.css" href="styles.css">
+
+<div id="app">
+  
+<input v-model="message" placeholder="Login">
+<p>Login is: {{ message }}</p>
+</div>
+
+
+
+<div id="app1">
+  
+<input v-model="message" placeholder="Password">
+<p>Pwd is: {{ message }}</p>
+</div>
+
+<script>
+ var app = new Vue ({
+   
+   el: '#app',
+   
+   data: {
+     message:''
+   }
+ })
+ 
+ var app1 = new Vue ({
+   
+   el: '#app1',
+   
+   data: {
+     message:''
+   }
+ })
+ 
+</script>

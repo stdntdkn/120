@@ -4,7 +4,7 @@
     <script src = https://cdn.jsdelivr.net/npm/vue/dist/vue.js></script>
 
 <header>
-      <!--Logo image linking back to homepage--> 
+       
       <center><a href="index.html">
         <img src="toilet.jpg" style="width:26vw;min-width:300px"></img></a></center> 
       <iframe 	width="560" 	height="315" 	src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
@@ -52,9 +52,22 @@ data: {
 
   )}
   </script>
-  
+  <div id="app6"> 
 <input type="checkbox" id="checkbox" v-model="checked">
 <label for="checkbox">{{ checked }}</label>
+  </div>
+
+
+<canvas id="Canvas" width="200" height="200" style="border:2px solid #000000;">
+</canvas>
+
+<script>
+var Canv = document.getElementById("Canvas");
+var bss = Canv.getContext("2d");
+bss.moveTo(0, 0);
+bss.lineTo(200, 200);
+bss.stroke();
+</script>
 
 <script>
 
@@ -150,6 +163,9 @@ var x = 100;
     
     <del v-if="todo.done">
     {{ todo.text }}
+
+    </del> 
+    <del v-show="todo.done">
     </del>
     <span v-else>
       {{ todo.text }}
@@ -200,6 +216,86 @@ data: {
       
        })
    </script>
+   
+   <script> 
+   Vue.component('button-counter', {
+props: ['text'],
+template: '<h1>{{text}}</h1>',
+data: function () {
+return {
+count: 0
+}
+},
+template: '<button v-on:click="count++">{{text}} Button clicked {{ count }} times.</button>'
+})
+   </script>
+   
+   <div id="btnclicked">
+<button-counter text = "Salam"></button-counter>
+</div>
+<script>
+new Vue({ el: '#btnclicked' })
+</script>
+  <script >
+    
+    this.$emit('event')
+    
+    
+  </script>
  
+<button-counter v-on:event'texxt'> </button-counter>
+
+<script> 
+
+var ComponentLocal = { 
+  }
+
+new Vue({
+el: '#localapp,
+components: {
+'component-local': ComponentLocal,
+}
+})
+
+Vue.component('base-checkbox', {
+  model: {
+    prop: 'checked',
+    event: 'change'
+  },
+  props: {
+    checked: Boolean
+  },
+  template: <input type="checkbox"
+      v-bind:checked="checked"
+      v-on:change="$emit('change', $event.target.checked)"
+    >
+
+})
+
+</script>
+
+   
+    </script>
+  
+
+
+<h4> fgfghgg</h4>
+<base-checkbox v-model="lol"></base-checkbox>
+
+
+<div id="hello">
+{{ message }}
+</div>
+
+<script>
+  
+var hello = new Vue({
+el: '#hello',
+data: {
+message: 'Hello Vuerld!'
+}
+})
+</script> 
+
 </body>
 </html>
